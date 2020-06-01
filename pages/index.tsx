@@ -33,6 +33,18 @@ const Index = ({ posts, title, description, ...props }) => {
               </div>
               <div className="grid gap-2 grid-cols-12 mb-8 max-w-sm">
                 <img
+                  src="/icons/github.svg"
+                  alt="Github Logo"
+                  className="col-span-1"
+                />
+                <a
+                  className="col-span-11"
+                  target="blank"
+                  href="https://github.com/andremalan"
+                >
+                  GitHub
+                </a>
+                <img
                   src="/icons/instagram.svg"
                   alt="Instagram Logo"
                   className="col-span-1"
@@ -67,6 +79,18 @@ const Index = ({ posts, title, description, ...props }) => {
                   href="https://www.facebook.com/andremalan/"
                 >
                   Facebook
+                </a>
+                <img
+                  src="/icons/twitter.svg"
+                  alt="Twitter Logo"
+                  className="col-span-1"
+                />
+                <a
+                  className="col-span-11"
+                  target="blank"
+                  href="https://twitter.com/dre_malan"
+                >
+                  Twitter
                 </a>
               </div>
               <div className="grid gap-2 grid-cols-2">
