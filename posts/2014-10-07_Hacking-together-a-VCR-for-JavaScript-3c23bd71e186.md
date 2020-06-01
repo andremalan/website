@@ -24,3 +24,7 @@ In order to make the HAR file play nice with Sinon, I forked an application call
 Not only does this make writing JavaScript integration tests much easier, it is also a great way to make completely offline demos of your application. Simple click around, save the HAR file, and then with the new mocks in place, you can click around the same way and it will use the recordings instead of the actual requests. Perfect for sales teams who want to have a gurantee that things will work the way they expected.
 
 Presentation below.
+
+[https://youtu.be/Df-OkCZiHcE?t=2666](https://youtu.be/Df-OkCZiHcE?t=2666)
+
+![](img/vcr.png)

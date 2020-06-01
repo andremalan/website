@@ -2,8 +2,8 @@ import Link from 'next/link'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 
-import Layout from '../../components/Layout'
-import getSlugs from '../../utils/getSlugs'
+import Layout from 'components/Layout'
+import getSlugs from 'utils/getSlugs.ts'
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
@@ -13,8 +13,8 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
       <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
         <div className="back">
           ←{' '}
-          <Link href="/">
-            <a>Back to post list</a>
+          <Link href="/archive">
+            <a>Back to archive</a>
           </Link>
         </div>
         <article>
@@ -58,7 +58,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 export async function getStaticProps({ ...ctx }) {
   const { postname } = ctx.params
 
-  const content = await import(`../../posts/${postname}.md`)
+  const content = await import(`../../archive/${postname}.md`)
   const config = await import(`../../siteconfig.json`)
   const data = matter(content.default)
 
@@ -74,9 +74,9 @@ export async function getStaticProps({ ...ctx }) {
 export async function getStaticPaths() {
   const blogSlugs = ((context) => {
     return getSlugs(context)
-  })(require.context('../../posts', true, /\.md$/))
+  })(require.context('../../archive', true, /\.md$/))
 
-  const paths = blogSlugs.map((slug) => `/post/${slug}`)
+  const paths = blogSlugs.map((slug) => `/archive/${slug}`)
 
   return {
     paths, // An array of path names, and any params

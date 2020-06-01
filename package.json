@@ -5,15 +5,35 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "eslint ./components/** ./pages/** -c .eslintrc.json --fix --ext js,jsx",
     "start": "next start",
     "export": "next export"
   },
   "dependencies": {
+    "@types/node": "^14.0.6",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
     "gray-matter": "^4.0.2",
+    "intercom-next": "^1.1.8",
+    "moment": "^2.26.0",
     "next": "9.3.6",
+    "prettier": "1.18.2",
     "raw-loader": "^4.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-markdown": "^4.3.1"
+    "react-intercom": "^1.0.15",
+    "react-markdown": "^4.3.1",
+    "react-moment": "^0.9.7",
+    "webpack": "^4.41.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.3"
   }
 }
