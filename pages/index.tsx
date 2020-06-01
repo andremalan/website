@@ -3,7 +3,7 @@ import PostList from 'components/PostList'
 
 import getPosts from 'utils/getPosts'
 
-const Index = ({ posts, title, description, ...props }) => {
+const Index = ({ title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={title} description={description}>
@@ -109,9 +109,9 @@ const Index = ({ posts, title, description, ...props }) => {
                 I blogged a lot a while ago, bot not in years. Mostly around ways to improve
                 education as well as exploring ways to increase my skills faster. These are a small subset of those posts,
                 along with some of my early writings on learning to become a
-                better programmer at the start of my career.
+                better programmer at the start of my career. You can find all my old posts on <a target="blank" href="https://andremalan.wordpress.com">WordPress</a>.
               </p>
-              <PostList posts={posts} path="post" />
+              <PostList />
             </div>
           </div>
         </main>
@@ -125,13 +125,8 @@ export default Index
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`)
 
-  const posts = ((context) => {
-    return getPosts(context)
-  })(require.context('../posts', true, /\.md$/))
-
   return {
     props: {
-      posts,
       title: configData.default.title,
       description: configData.default.description,
     },
