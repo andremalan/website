@@ -4,12 +4,10 @@ export default function Header() {
   return (
     <>
       <header className="header">
-        <nav className="nav" role="navigation" aria-label="main navigation">
+        <nav className="nav flex flex-row" role="navigation" aria-label="main navigation">
+          <h1 className="flex-grow">👋 Welcome</h1>
           <Link href="/">
             <a>andremalan.com</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
           </Link>
         </nav>
       </header>
@@ -30,7 +28,6 @@ export default function Header() {
         }
         nav a {
           margin-right: 20px;
-          color: #00a395;
           text-decoration: none;
         }
         nav a:hover {

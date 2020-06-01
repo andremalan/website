@@ -13,3 +13,7 @@ At this year’s EmberConf on the 25th of March I gave a presentation with [Heyj
 [EmberConf](http://emberconf.com/ "EmberConf") was an amazing experience, the Ember community is full of genuine and welcoming people and I am so excited to see the great things that this community will build together.
 
 Slides and video below.
+
+[https://youtu.be/JC8TOXe8TYM](https://youtu.be/JC8TOXe8TYM)
+
+![](img/emberconf.png)

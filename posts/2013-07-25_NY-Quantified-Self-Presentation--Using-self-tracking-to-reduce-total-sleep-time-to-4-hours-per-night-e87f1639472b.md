@@ -12,4 +12,6 @@ slug: >-
 
 This is a presentation that I gave at the New York Quantified Self Meetup. I talk about how I started to sleep polyphasically and also how I used self-tracking to make sure that I wasn’t killing myself.
 
-#### Video:
+[https://vimeo.com/68818895](https://vimeo.com/68818895)
+
+![](img/video-qs.png)

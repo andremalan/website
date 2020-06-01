@@ -13,9 +13,13 @@ Last month I gave a lightning talk at the Ember.js NYC meetup. The talk was abou
 Video and slides below:
 
 #### Video:
+[https://youtu.be/-0qngpFNM5A?t=383](https://youtu.be/-0qngpFNM5A?t=383)
 
 #### Slides:
 
 [http://slid.es/andremalan/your-front-end-is-not-your-back-end/](http://slid.es/andremalan/your-front-end-is-not-your-back-end/)
 
 [http://slid.es/andremalan/your-front-end-is-not-your-back-end/embed](http://slid.es/andremalan/your-front-end-is-not-your-back-end/embed)
+
+
+![](img/frontend-backend.png)
