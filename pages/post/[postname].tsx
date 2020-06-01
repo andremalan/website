@@ -1,18 +1,17 @@
 import Link from 'next/link'
-import { GetStaticProps, GetStaticPaths } from 'next'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import getPosts from 'utils/getPosts'
 import Layout from 'components/Layout'
-import getSlugs from 'utils/getSlugs.ts'
+import getSlugs from 'utils/getSlugs'
 import PostList from 'components/PostList'
 
-export default function BlogPost({ posts, siteTitle, frontmatter, markdownBody }) {
+export default function BlogPost({ posts, siteTitle, frontmatter, markdownBody}) {
   if (!frontmatter) return <></>
 
   return (
     <>
-      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
+      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} description={frontmatter.title}>
         <div className="text-purple-900">
           ←{' '}
           <Link href="/">
@@ -55,7 +54,7 @@ export default function BlogPost({ posts, siteTitle, frontmatter, markdownBody }
   )
 }
 
-export const getStaticProps: getStaticProps = async ({ ...ctx }) => {
+export const getStaticProps = async ({ ...ctx }) => {
   const { postname } = ctx.params
 
   const content = await import(`../../posts/${postname}.md`)
@@ -76,7 +75,7 @@ export const getStaticProps: getStaticProps = async ({ ...ctx }) => {
   }
 }
 
-export const getStaticPaths: getStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const blogSlugs = ((context) => {
     return getSlugs(context)
   })(require.context('../../posts', true, /\.md$/))
